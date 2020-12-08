@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="app.js" defer></script>
+  <style>
+    body {
+      background-color: #282a3a;
+      font-family: sans-serif;
+      display: grid;
+      grid-template-columns: 33% 33% 33%;
+      grid-template-rows: 10% auto;
+      align-items: center;
+      justify-items: center;
+      align-content: center;
+      height: 100vh;
+      color: aliceblue;
+    }
+    h1 {
+      margin: 30px;
+      grid-column-start: span 3;
+    }
+    button {
+      margin: 30px;
+      display: inline-block;
+      grid-column-start: span 3;
+      background-color: #ff657a; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      outline: none;
+      transition-duration: 0.4s;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c24e5d; /* Green */
+      color: white;
+    }
+    textarea {
+      grid-column-start: span 3;
+      width: 300px;
+      height: 100px;
+    }
+    #email {
+      justify-items: center;
+      grid-column-start: span 1;
+      min-width: 300px;
+      height: 30px;
+    }
+    .form {
+      grid-column-start: span 3;
+    }
+    .help-block {
+      display: grid;
+      color: #ff657a;
+      font-size: 11px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .has-error {
+      display: grid;
+      justify-items: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>🍝 Pasta</h1>
+  <form action="" class="form">
+    <div class="form-group">
+      <input type="email" placeholder="Type email only (I will check, seriously)" id="email" class="form-control" />
+    </div>
+  </form>
+  <h1>✂️ Copy</h1>
+  <textarea id="copyText" placeholder="Type any text and then copy it to clipboard"></textarea>
+  <button onclick="copyToClipboard()">
+  Copy text from textarea
+</button>
+</body>
+</html>
